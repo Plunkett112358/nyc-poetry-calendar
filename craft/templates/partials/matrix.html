@@ -1,0 +1,46 @@
+{% for block in entry.matrix %}
+  {% switch block.type %}
+    {% case 'heading' %}
+    <div class="page-header">
+      <h4>{{ block.heading }}</h4>
+    </div>
+      
+    {% case 'text' %}
+      <div class="matrix">{{ block.text }}</div>
+    {% case 'image' %}
+      {% if block.image | length %}
+        <img src="{{ block.image[0].url }}" class="img-responsive" />
+      {% endif %}
+    {% case 'quote' %}
+      <blockquote>
+        <p>{{ block.quote }}</p>
+        <cite>
+          <p><small>{{ block.credit }}</small></p>
+        </cite>
+      </blockquote>
+    {% case 'gallery' %}
+      <div class="flexslider">
+        <ul class="slides">
+          {% for image in block.images %}
+            <li>
+              <img src="{{ image.url }}" class="img-responsive">
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    {% case 'video' %}
+
+      <div class="video">
+        {{ block.videos.embed()}}
+      </div>
+  {% endswitch %}
+{% endfor %}
+
+
+{% set myJs %}
+$('.flexslider').flexslider();
+   $(".video").fitVids();
+{% endset %}
+
+{% includeJs myJs %}

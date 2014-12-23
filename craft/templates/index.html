@@ -1,0 +1,69 @@
+{% extends '_layout' %}
+
+
+{% block content %}
+<!-- Carousel -->
+<div id="carousel-example-generic" style="height: 300px; margin-bottom: 20px;"class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div style="height: 300px;" class="carousel-inner">
+
+    <div class="item active">
+      <img src=" http://fc06.deviantart.net/fs26/f/2009/251/0/0/Field_of_Flowers_by_flyingblucake02k.jpg" alt="...">
+     
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+    <div class="item">
+       <img class="img-responsive" src="http://www.hgdecoration.com/wp-content/uploads/2013/03/garden-decor.jpg">
+     
+      <div class="carousel-caption">
+         
+      </div>
+    </div>
+
+    <div class="item">
+      <img class="img-responsive" src="http://wallpaperus.org/wallpapers/08/290/garden-bridges-5830x3890-wallpaper-2322780.jpg" alt="...">
+      <div class="carousel-caption">
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+
+<!-- end carousel -->
+
+
+<div class="container">
+
+	<div class="page-header">
+	  <h1>The Gardens<img width="90px"class="animated zoomInRight" src="image/large_bee.png" alt=""></h1>
+	</div>
+
+	
+		
+
+		
+	</div>
+
+
+{% includeJsFile '/scripts/date.js' %}
+
+{% endblock %}
